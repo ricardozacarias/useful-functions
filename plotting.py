@@ -45,7 +45,7 @@ def make_hcolorbar(data, units, cmap, filename):
     import matplotlib.pyplot as plt
     import matplotlib as mpl
     
-    fig, ax = plt.subplots(figsize=(6, 1))
+    fig, ax = plt.subplots(figsize=(6, 2))
     fig.subplots_adjust(bottom=0.5)
     
     # normalize colormap
@@ -58,7 +58,7 @@ def make_hcolorbar(data, units, cmap, filename):
     cb1.set_label(units)
     
     # save figure
-    plt.savefig(filename)
+    plt.savefig(filename, dpi=600)
     
 # this function manually truncates colormaps in order to get the colors that we want.
 # it has the option of inverting the truncated version aswell.
