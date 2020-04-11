@@ -96,15 +96,18 @@ def truncate_colormap(cmap, minval=0.0, maxval=1.0, n=100, reverse=False):
         return new_cmap
 
 # extract n colors from a colormap and plots the results in a palplot
-def get_colors(cmap, n):
+def get_colors(cmap, n, plot=False):
     
     import matplotlib as mpl
     import seaborn as sns
     import numpy as np
     
+    if plot:
+        sns.palplot(sns.color_palette(rgba)); 
+        
     cmap = mpl.cm.get_cmap(cmap)
     rgba = [cmap(x) for x in np.linspace(0.01, 0.99, n)]
-    #sns.palplot(sns.color_palette(rgba));    
+       
     return rgba
 
 # extract a single color from a colormap
