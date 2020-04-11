@@ -104,7 +104,7 @@ def get_colors(cmap, n):
     
     cmap = mpl.cm.get_cmap(cmap)
     rgba = [cmap(x) for x in np.linspace(0.01, 0.99, n)]
-    sns.palplot(sns.color_palette(rgba));    
+    #sns.palplot(sns.color_palette(rgba));    
     return rgba
 
 # extract a single color from a colormap
